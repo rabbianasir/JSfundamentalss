@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript</title>
-   <script src="chp26-30.js"></script>
+   <script src="chp53-57.js"></script>
 </head>
+<style>
+    a{
+        
+        margin-left: 60px;
+    }
+    .mobiles h1{
+        text-align: center;
+        color: blue;
+    }
+    .mobiles ul li{
+        display: inline-block;
+    }
+    .mobiles ul li img:hover{
+        transform: scale(1.1);
+    }
+    table{
+        border: 2px solid gray;
+        width: 230px;
+    }
+    #std, td{
+        border: 2px solid gray;
+        text-align: center;
+        width: 330px;
+    }
+    .dis{
+        display: block;
+    }
+   
+#stdRecord table , th{
+    border:  2px solid gray;
+}
+
+</style>
 <body>
+<!--
 <script>document.write("Yeh!I can write HTML content through JavaScript");</script>
  <h1>I am a beginner</h1>
  <script>document.write("▬▬▬▬▬▬▬▬▬ஜ ۩۞۩ ஜ▬▬▬▬▬▬▬▬▬");</script>
@@ -62,5 +96,218 @@
  <option><script>document.write(arr[5]);</script></option>
  </select>
 
+<div>
+        <h3>Ch# 43-48 <br><br>Question#1</h3>
+<a href="#" onclick = 'click1()'>Click Me</a>
+</div>
+<div class="mobiles">
+    <h3>Question#2</h3>
+    <h1>Mobile Phones Lookup</h1>
+    <ul >
+        <li>
+    <figure>
+        <img onclick="mobile()" src="download.jpg" style="width:200px" >
+        <figcaption style="padding-left: 80px;">Nokia</figcaption>
+      </figure></li>
+      <li> <figure>
+        <img onclick="mobile()" src="pic2.png" style="width:200px">
+        <figcaption style="padding-left: 80px;">Oppo</figcaption>
+      </figure></li>
+      <li><figure>
+        <img onclick="mobile()" src="pic3.jpg" style="width:200px">
+        <figcaption style="padding-left: 60px;">Itel Vision</figcaption>
+      </figure></li>
+      <li><figure>
+        <img onclick="mobile()" src="pic4.jpg" style="width:200px">
+        <figcaption style="padding-left: 60px;">Iphone 11 pro</figcaption>
+      </figure></li>
+    </ul>
+</div>
+<div class="stdRecord">
+    <h3>Question#3</h3>
+<table >
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Class</th>
+    </tr>
+</table>
+<table id="std" >
+    <tr  >
+        <td>0</td>
+        <td>Mark</td>
+        <td>8</td>
+        <td><button  onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>William</td>
+        <td>11</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Hannah</td>
+        <td>8</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Skye</td>
+        <td>5</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Jane</td>
+        <td>8</td>
+        <td><button onclick="deleteRow()" onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Eva</td>
+        <td>2</td>
+        <td><button onclick="deleteRow()" onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>James</td>
+        <td>7</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Zain</td>
+        <td>9</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>John</td>
+        <td>10</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Emilly</td>
+        <td>Inter</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+</table>
+</div>
+
+
+<div>
+    <h3>Question#4</h3>
+<img id="mouse" onmouseover="mouseOver()" onmouseout="mouseOut()" src="pic3.jpg">
+
+</div>
+
+<div>
+    <h3>Question#5</h3>
+    <h1 id = "counter" style="padding-left: 50px;">0</h1>
+    <button onclick="increase()">Increase </button>
+    <button onclick="decrease()">Decrease</button>
+</div>
+
+<h3>Ch# 49-52 <br><br>Question#1</h3>
+    <div id = "data">
+
+    </div>
+
+    <input type="text" id = "uname" value = "Username"><br>
+    <input type="text" id = "email" value = "E-mail"><br>
+    <input type="text" id= "pswrd" value = "Password"><br>
+    <input type="text" id = "phone"  value = "Phone#"><br>
+    <input type="button" onclick="submit()" value = "Signup">
+
+
+
+
+
+<div>
+    <h3>Question#2</h3>
+    <img src="pic4.jpg" >
+    <p style="padding-left: 50px;">Iphone 11 pro</p>
+    <button  id = "read" onclick="read()" style="width: 200px;">Read More</button>
+</div>
+
+<h3>Question#3</h3>
+
+
+
+    
+    <div id="stdRecord">
+        <table  cellspacing=2 cellpadding=5 id="data_table" >
+        <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Age</th>
+        </tr>
+        
+        <tr id="row1">
+        <td id="name_row1">Duaa</td>
+        <td id="country_row1">Pakistan</td>
+        <td id="age_row1">20</td>
+        <td>
+        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+        </td>
+        </tr>
+        
+        <tr id="row2">
+        <td id="name_row2">Waqar</td>
+        <td id="country_row2">America</td>
+        <td id="age_row2">36</td>
+        <td>
+        <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+        </td>
+        </tr>
+        
+        <tr id="row3">
+        <td id="name_row3">Emilly</td>
+        <td id="country_row3">India</td>
+        <td id="age_row3">19</td>
+        <td>
+        <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+        </td>
+        </tr>
+        
+        <tr>
+        <td><input type="text" id="new_name"></td>
+        <td><input type="text" id="new_country"></td>
+        <td><input type="text" id="new_age"></td>
+        <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+        </tr>
+        
+        </table>
+        </div>-->
+
+<div>
+<h1> DOM </h1>
+<div id=”form-content” class=”content”>
+<label for=”first-name”>First Name</label>
+<input type=”text” id=”first-name” />
+<label for=”last-name”>Last Name</label>
+<input type=”text” id=”last-name” />
+<label for=”email”>Email</label>
+<input type=”text” id=”email” />
+</div>
+<div id=”main-content” class=”content”>
+<p class=”render”> First Name : Alex</p>
+<p class=”render” id=”lastName”>Last Name: Bank</p>
+<p class=”render”> Email : alexbank@example.com</p>
+<p class=”render”> Country : Pakistan </p>
+<p class=”render”> contact : +92 300 1234567</p>
+</div>
+</div>
+<div id="modal" class="modal">
+    <img class="modal-content" id="modal-img">
+</div>
 </body>
 </html>
